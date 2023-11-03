@@ -5,10 +5,11 @@ import { Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Button from '../components/Button';
 import { Pressable } from 'react-native';
+
 // import { NavigationAction } from '@react-navigation/native';
 // import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Welcome = (navigation) => {
+const Welcome = ( {navigation} ) => {
   return (
     <LinearGradient
         style={{
@@ -120,10 +121,10 @@ const Welcome = (navigation) => {
                 color: COLORS.white,
               }}>Calling, Enjoy Safe and private texting</Text>
           </View>
-          
+
           <Button
             title="Join Now"
-            onPress={() => navigation.navigate("Signup")}
+            onPress={()=>navigation.navigate("Signup")}
             style={{
               marginTop:22,
               width: "100%",
@@ -140,7 +141,7 @@ const Welcome = (navigation) => {
               color: COLORS.white,
             }}>Already have an account?</Text>
             <Pressable 
-              onPress={() => navigation.navigate("Login")}
+              onPress={()=>navigation.navigate("Login")}
             >
               <Text style={{ 
                 fontSize: 16,
